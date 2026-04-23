@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: "Fira Sans", sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  padding: 24px 32px 40px;
+}
+
+/* Верхнее меню */
+.footer__top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.footer__nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer__nav a,
+.footer__mobile-menu a {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #fff;
+}
+
+.is-active {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Бургер */
+.footer__burger {
+  display: none;
+  width: 24px;
+  height: 18px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+/* Большой текст */
+.footer__hero {
+  position: absolute;
+  top: 20%;
+  left: 60px;
+}
+
+.footer__title {
+  margin: 0;
+  font-size: clamp(64px, 8vw, 110px);
+  line-height: 0.9;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.footer__subtitle {
+  margin: 20px 0 0;
+  font-size: clamp(18px, 1.7vw, 30px);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+/* Подпись справа */
+.footer__credit {
+  position: absolute;
+  right: 24px;
+  top: 60%;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+/* Нижнее меню */
+.footer__bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 90px;
+  transform: translateX(-50%);
+}
+
+/* Мобильное меню */
+.footer__mobile-menu {
+  display: none;
+}
+
+/* Планшет */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 24px;
+  }
+
+  .footer__hero {
+    left: 48px;
+    top: 22%;
+  }
+
+  .footer__title {
+    font-size: clamp(56px, 7vw, 82px);
+  }
+
+  .footer__subtitle {
+    font-size: clamp(16px, 1.8vw, 22px);
+  }
+
+  .footer__bottom {
+    bottom: 70px;
+  }
+}
+
+/* Мобилка */
+@media (max-width: 480px) {
+  .footer {
+    min-height: 100vh;
+    padding: 18px 16px 24px;
+  }
+
+  .footer__nav--top,
+  .footer__nav--bottom {
+    display: none;
+  }
+
+  .footer__burger {
+    display: flex;
+  }
+
+  .footer__top {
+    justify-content: flex-end;
+  }
+
+  .footer__hero {
+    top: 16%;
+    left: 18px;
+  }
+
+  .footer__title {
+    font-size: 36px;
+    line-height: 0.95;
+  }
+
+  .footer__subtitle {
+    margin-top: 10px;
+    font-size: 11px;
+  }
+
+  .footer__credit {
+    right: 16px;
+    top: 52%;
+    font-size: 8px;
+  }
+
+  .footer__mobile-menu {
+    display: flex;
+    position: absolute;
+    right: 18px;
+    bottom: 70px;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .footer__mobile-menu a {
+    font-size: 15px;
+  }
+}
